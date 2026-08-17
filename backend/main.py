@@ -4,9 +4,11 @@ from pydantic import BaseModel
 import anthropic
 import json
 import re
+import os
 
 app = FastAPI(title="AI Resume Analyzer", version="1.0.0")
 
+# CORS fix — allow all origins
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -15,7 +17,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = anthropic.Anthropic()
+client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 class AnalyzeRequest(BaseModel):
     job_description: str
