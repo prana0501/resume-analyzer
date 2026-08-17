@@ -2,7 +2,7 @@
 
 An AI-powered resume analyzer built with FastAPI + React + Claude API.
 Paste any job description and your resume — get a fit score, keyword gap analysis, tailored resume summary, and cover letter opening instantly.
-
+Deployed Application(DEMO) : https://resume-analyzer-nine-swart.vercel.app/
 ---
 
 ## Project Structure
