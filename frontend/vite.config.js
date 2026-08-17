@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/analyze': 'http://localhost:8000'
+      '/analyze': 'https://resume-analyzer-api-idia.onrender.com/'
     }
   }
 })
