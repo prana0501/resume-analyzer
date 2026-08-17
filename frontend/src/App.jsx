@@ -36,7 +36,8 @@ export default function App() {
     }, 2800)
 
     try {
-      const { data } = await axios.post('/analyze', { job_description: jd, resume })
+      const BASE = import.meta.env.VITE_API_URL || ''
+      const { data } = await axios.post(`${BASE}/analyze`, { job_description: jd, resume })
       setResult(data)
       setStep(3)
     } catch (e) {
